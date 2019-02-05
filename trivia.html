@@ -9,9 +9,19 @@
   <body>
     <header>
       <h1>Some Trivia Quesions</h1>
+      <h2>powered by Open Trivia Database</h2>
     </header>
     <main>
-      <p><button type="button" id="question">Question</button></p>
+      <p><button type="button" id="next">next question</button></p>
+      <div class="">
+        <p>Question: <span id="question"></span></p>
+        <div class="">
+          <div>Are you hungry?</div>
+          yes: <input type="radio" name="hungry" value="yes" checked>
+          no: <input type="radio" name="hungry" value="no">
+          unsure: <input type="radio" name="hungry" value="dunno">
+        </div>
+      </div>
     </main>
     <footer>
       <div id="text-area"></div>
