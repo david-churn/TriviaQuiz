@@ -1,10 +1,22 @@
 * {
   box-sizing: border-box;
-  border: solid 1px black;
 }
 body {
   max-width: 80%;
+  margin: 0.1em;
 }
-header h2 {
-  font-size: 0.5em;
+h2 {
+  font-size: 0.7em;
+}
+li:hover {
+  background: gray;
+}
+#question {
+  font-size: 1.3em;
+}
+.red {
+  background: red.
+}
+.green {
+  background: green;
 }
