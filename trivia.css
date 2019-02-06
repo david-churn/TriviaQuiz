@@ -8,15 +8,19 @@ body {
 h2 {
   font-size: 0.7em;
 }
-li:hover {
-  background: gray;
+li {
+  line-height: 1.5em;
+  width: 50%;
 }
-#question {
+li:hover {
+  background: lightgray;
+}
+.larger {
   font-size: 1.3em;
 }
 .red {
-  background: red.
+  background: red;
 }
 .green {
-  background: green;
+  background: lightgreen;
 }
