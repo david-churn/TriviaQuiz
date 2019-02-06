@@ -5,24 +5,17 @@
 let nextObj = document.getElementById("next");
 let questionObj = document.getElementById("question");
 let textAreaObj = document.getElementById("text-area");
-let questionNbr = 99;
+let questionNbr = 0;
 let questionArr = [];
 
+getQuestions();
+questionObj.innerHTML = questionArr[questionNbr].question;
+
 nextObj.addEventListener('click', function() {
-  if (questionNbr > 99) {
-    getQuestions()
-      .then(function(respObj) {
-        console.log(respObj);
-        if (respObj.response_code == 0) {
-          questionArr = respObj.results;
-          questionNbr = 0;
-        }
-      })
-      // .catch((err) {
-      //   console.log('problem with the API call' + err)
-      // })
+  if (questionNbr > 9) {
+    getQuestions();
+    questionNbr = 0;
     }
-  }
   else {
     questionNbr += 1;
   }
@@ -35,5 +28,9 @@ function getQuestions() {
     .then((respObj)=> {
       return respObj.json();
     })
+    .then(function(respObj) {
+      console.log(respObj);
+      questionArr = respObj.results;
+      return;
+    })
 }
-console.log(questionArr);
